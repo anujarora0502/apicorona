@@ -36,5 +36,26 @@ function populateTable(data){
 
    table.appendChild(row);
  }
+ var rowtotal= document.createElement("tr");
 
+ var cell1total= document.createElement("td");
+ var cell2total= document.createElement("td");
+ var cell3total= document.createElement("td");
+ var cell4total= document.createElement("td");
+ var cell5total= document.createElement("td");
+
+var total = data.dataTypeCountMap;
+ cell1total.innerHTML = "Country Total";
+ cell2total.innerHTML = total.TOTAL;
+ cell3total.innerHTML = total.ACTIVE;
+ cell4total.innerHTML = total.RECOVERED;
+ cell5total.innerHTML = total.DEATH;
+
+ rowtotal.appendChild(cell1total);
+ rowtotal.appendChild(cell2total);
+ rowtotal.appendChild(cell3total);
+ rowtotal.appendChild(cell4total);
+ rowtotal.appendChild(cell5total);
+
+ table.appendChild(rowtotal);
 }
