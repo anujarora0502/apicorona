@@ -1,8 +1,9 @@
-axios.get("https://api.coronadaily.org/covid/location/INDIA").then(handleResponse);
-
-function handleResponse(data){
+async function handleResponse(){
+  let data = await axios.get("https://api.coronadaily.org/covid/location/INDIA");
   populateTable(data.data);
 }
+
+handleResponse();
 
 function populateTable(data){
   var table= document.querySelector(".main-table")
